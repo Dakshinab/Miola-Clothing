@@ -1,0 +1,232 @@
+{
+  "main": {
+    "title": "Home Page",
+    "description": "Main page collection",
+    "images": [],
+    "categories": {
+      "featured": {
+        "name": "Featured",
+        "images": [],
+        "types": {
+          "t-shirts": {
+            "name": "T-shirts",
+            "images": []
+          },
+          "dresses": {
+            "name": "Dresses",
+            "images": []
+          },
+          "crop-tops": {
+            "name": "Crop Tops",
+            "images": []
+          },
+          "pants": {
+            "name": "Pants",
+            "images": []
+          },
+          "jeans": {
+            "name": "Jeans",
+            "images": []
+          },
+          "skirts": {
+            "name": "Skirts",
+            "images": []
+          },
+          "shorts": {
+            "name": "Shorts",
+            "images": []
+          },
+          "caps": {
+            "name": "Caps",
+            "images": []
+          }
+        }
+      },
+      "trending": {
+        "name": "Trending",
+        "images": [],
+        "types": {
+          "t-shirts": {
+            "name": "T-shirts",
+            "images": []
+          },
+          "dresses": {
+            "name": "Dresses",
+            "images": []
+          },
+          "crop-tops": {
+            "name": "Crop Tops",
+            "images": []
+          },
+          "pants": {
+            "name": "Pants",
+            "images": []
+          },
+          "jeans": {
+            "name": "Jeans",
+            "images": []
+          },
+          "skirts": {
+            "name": "Skirts",
+            "images": []
+          },
+          "shorts": {
+            "name": "Shorts",
+            "images": [
+              {
+                "id": "1766223008260",
+                "filename": "women-1766223008256-410236617.jpeg",
+                "url": "http://localhost:5000/uploads/women-1766223008256-410236617.jpeg",
+                "name": "broen dress",
+                "price": "$12.99",
+                "uploadedAt": "2025-12-20T09:30:08.260Z"
+              }
+            ]
+          },
+          "caps": {
+            "name": "Caps",
+            "images": []
+          }
+        }
+      },
+      "sale": {
+        "name": "Sale",
+        "images": [],
+        "types": {
+          "t-shirts": {
+            "name": "T-shirts",
+            "images": []
+          },
+          "dresses": {
+            "name": "Dresses",
+            "images": []
+          },
+          "crop-tops": {
+            "name": "Crop Tops",
+            "images": []
+          },
+          "pants": {
+            "name": "Pants",
+            "images": []
+          },
+          "jeans": {
+            "name": "Jeans",
+            "images": []
+          },
+          "skirts": {
+            "name": "Skirts",
+            "images": []
+          },
+          "shorts": {
+            "name": "Shorts",
+            "images": []
+          },
+          "caps": {
+            "name": "Caps",
+            "images": []
+          }
+        }
+      }
+    }
+  },
+  "women": {
+    "title": "Women's Collection",
+    "description": "Discover the latest trends in women's fashion",
+    "images": [],
+    "exploreLink": "/women",
+    "categories": {
+      "crop-tops": {
+        "name": "Crop Tops",
+        "images": []
+      },
+      "t-shirts": {
+        "name": "T-shirts",
+        "images": []
+      },
+      "dresses": {
+        "name": "Dresses",
+        "images": []
+      },
+      "pants": {
+        "name": "Pants",
+        "images": []
+      },
+      "jeans": {
+        "name": "Jeans",
+        "images": []
+      },
+      "skirts": {
+        "name": "Skirts",
+        "images": []
+      },
+      "shorts": {
+        "name": "Shorts",
+        "images": []
+      },
+      "caps": {
+        "name": "Caps",
+        "images": []
+      }
+    }
+  },
+  "men": {
+    "title": "Men's Collection",
+    "description": "Modern fashion for the contemporary man",
+    "images": [],
+    "exploreLink": "/men",
+    "categories": {
+      "t-shirts": {
+        "name": "T-shirts",
+        "images": []
+      },
+      "shirts": {
+        "name": "Shirts",
+        "images": []
+      },
+      "jeans": {
+        "name": "Jeans",
+        "images": []
+      },
+      "pants": {
+        "name": "Pants",
+        "images": []
+      },
+      "caps": {
+        "name": "Caps",
+        "images": []
+      }
+    }
+  },
+  "kids": {
+    "title": "Kids' Collection",
+    "description": "Adorable outfits for your little ones",
+    "images": [],
+    "exploreLink": "/kids",
+    "categories": {
+      "t-shirts": {
+        "name": "T-shirts",
+        "images": []
+      },
+      "tops": {
+        "name": "Tops",
+        "images": []
+      },
+      "pants": {
+        "name": "Pants",
+        "images": []
+      },
+      "shorts": {
+        "name": "Shorts",
+        "images": []
+      },
+      "dresses": {
+        "name": "Dresses",
+        "images": []
+      },
+      "caps": {
+        "name": "Caps",
+        "images": []
+      }
+    }
+  }
+}
