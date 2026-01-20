@@ -14,8 +14,10 @@ A modern, responsive e-commerce platform for Miola Clothing, built with React an
   - Bottoms (Jeans/Pants/Shorts): 26, 28, 32, 34, 36
   - Caps: No size needed
 - **Shopping Cart** - Add products to cart, view total price, remove items
-- **User Authentication** - Login/Signup modal with email/mobile and password
-- **Checkout** - Buy now functionality with order confirmation
+- **User Authentication** - Auth0 integration for secure login and signup
+- **Checkout** - Multi-step checkout with Sri Lanka-only delivery, address fields, and mobile validation
+- **Custom Notifications** - Real-time feedback with auto-dismissing notifications (3-second display)
+- **Payment Methods** - Multiple card payment options with visual card images
 
 ### Admin Features
 - **Product Management** - Upload, edit, and delete products
@@ -36,8 +38,9 @@ A modern, responsive e-commerce platform for Miola Clothing, built with React an
 ## 🛠️ Tech Stack
 
 **Frontend:**
-- React 18
-- React Router v6
+- React 19.2.0
+- React Router 7.9.6
+- Auth0 (@auth0/auth0-react 2.11.0)
 - Context API (Cart management)
 - CSS3 (Responsive design)
 - Axios (API calls)
@@ -112,7 +115,7 @@ npm run build
 npm start
 ```
 
-Frontend runs on http://localhost:3001
+Frontend runs on http://localhost:3000
 
 ## 📚 API Endpoints
 
@@ -132,7 +135,7 @@ Frontend runs on http://localhost:3001
 ### As a Customer
 
 1. **Browse Products**
-   - Visit http://localhost:3001
+   - Visit http://localhost:3000
    - Click on Women's, Men's, or Kids' to view collections
    - Select a category to see products
 
@@ -156,7 +159,8 @@ Frontend runs on http://localhost:3001
 
 1. **Access Admin Panel**
    - Click admin link in footer
-   - Navigate to http://localhost:3001/admin
+   - Navigate to http://localhost:3000/admin
+   - Log in using Auth0 authentication
 
 2. **Upload Products**
    - Select section (Main Page, Women's, Men's, Kids')
@@ -166,10 +170,16 @@ Frontend runs on http://localhost:3001
    - Upload product image
    - Click "Upload Product"
 
-3. **Edit/Delete Products**
-   - View all products in admin panel
-   - Click edit icon to modify details
+3. **Manage Products**
+   - Switch to "Manage Products" tab in admin panel
+   - View all products from all sections in one place
+   - Click edit icon to modify product name and price
    - Click delete icon to remove product
+   - See product metadata (section, category, clothing type)
+
+4. **Edit/Delete Individual Products**
+   - Switch between Main Page, Women's, Men's, or Kids' tabs
+   - Edit or delete products directly from each section
 
 ## 📱 Responsive Breakpoints
 
@@ -229,5 +239,5 @@ For issues or inquiries, contact via WhatsApp link in the footer.
 
 ---
 
-**Last Updated**: December 2025
-**Version**: 1.0.0
+**Last Updated**: January 2026
+**Version**: 1.1.0

@@ -10,15 +10,162 @@
         "types": {
           "t-shirts": {
             "name": "T-shirts",
-            "images": []
+            "images": [
+              {
+                "id": "1768581745427",
+                "filename": "women-1768581745337-943285212.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768581745337-943285212.jpeg",
+                "name": " New Men Women T Shirt Pullover Oversize Korean version Cartoon Cat Group Printed T-Shirt Casual Short Sleeve Couples T-Shirt",
+                "price": "$ 6.00",
+                "uploadedAt": "2026-01-16T16:42:25.427Z"
+              },
+              {
+                "id": "1768581861975",
+                "filename": "women-1768581861954-887973785.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768581861954-887973785.jpeg",
+                "name": " New Men Women T Shirt Pullover Oversize Korean version Tom And Jerry Printed T-Shirt Casual Short Sleeve Couples T-Shirt",
+                "price": "$ 6.15",
+                "uploadedAt": "2026-01-16T16:44:21.975Z"
+              },
+              {
+                "id": "1768581945981",
+                "filename": "women-1768581945854-457295466.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768581945854-457295466.jpeg",
+                "name": "Powerful Blouse Training Streetwear T-shirt Women's Shirt Academy Gym Fitness T-shirt",
+                "price": "$ 5.75",
+                "uploadedAt": "2026-01-16T16:45:45.981Z"
+              },
+              {
+                "id": "1768582003889",
+                "filename": "women-1768582003866-404872649.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768582003866-404872649.jpeg",
+                "name": "Cute Print Solid Crew Neck T-Shirt, Short Sleeve Casual Every Day Top For All Season, Women's Clothing",
+                "price": "$7.00",
+                "uploadedAt": "2026-01-16T16:46:43.889Z"
+              },
+              {
+                "id": "1768582116901",
+                "filename": "women-1768582116887-277035991.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768582116887-277035991.jpeg",
+                "name": "Pink Color Cute Panda Chase your Dreams, Print Solid Crew Neck T-Shirt, Short Sleeve Casual Every Day Top For All Season, Women's Clothing",
+                "price": "$ 7.25",
+                "uploadedAt": "2026-01-16T16:48:36.901Z"
+              },
+              {
+                "id": "1768582222046",
+                "filename": "women-1768582222015-745202258.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768582222015-745202258.jpeg",
+                "name": "Cat n Butterfly Trend Clothing Print T Popular Ladies Casual Fashion Short Sleeve Women Graphic T-shirts O-neck Clothes Tees",
+                "price": "$ 7.00",
+                "uploadedAt": "2026-01-16T16:50:22.046Z"
+              }
+            ]
           },
           "dresses": {
             "name": "Dresses",
-            "images": []
+            "images": [
+              {
+                "id": "1768798696269",
+                "filename": "women-1768798696026-995120529.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768798696026-995120529.jpeg",
+                "name": "Elegant Dress Women Casual Temperament Dress Women Short Sleeves Loose Dresses Weekend Holiday",
+                "price": "$ 9.25",
+                "uploadedAt": "2026-01-19T04:58:16.317Z"
+              },
+              {
+                "id": "1768798757770",
+                "filename": "women-1768798757211-3202469.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768798757211-3202469.jpeg",
+                "name": "Elegant Dress Women Casual Temperament Dress Women long Sleeves Loose White Dresses Weekend Holiday",
+                "price": "$ 8.5",
+                "uploadedAt": "2026-01-19T04:59:17.770Z"
+              },
+              {
+                "id": "1768798825537",
+                "filename": "women-1768798825343-688599742.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768798825343-688599742.jpeg",
+                "name": "Women's Summer Floral Spaghetti Strap Beach Short Dress,Womens Dresses,Woman Clothing,Woman Clothes,Sundress,New in Dress 2026",
+                "price": "$ 9.00",
+                "uploadedAt": "2026-01-19T05:00:25.537Z"
+              },
+              {
+                "id": "1768798862829",
+                "filename": "women-1768798862736-340689290.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768798862736-340689290.jpeg",
+                "name": "Women's Summer Floral Spaghetti Strap Beach Short Dress,Womens Dresses,Woman Clothing,Woman Clothes,Sundress,New in Dress 2025",
+                "price": "$ 9.00",
+                "uploadedAt": "2026-01-19T05:01:02.829Z"
+              },
+              {
+                "id": "1768798983255",
+                "filename": "women-1768798983085-401865781.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768798983085-401865781.jpeg",
+                "name": "Olive Knitted Slimming Waist Dress Fashionable Elegant Goddess Style Mini Skirt Short Sleeve round Neckline New Arrival 2026",
+                "price": "$ 8.15",
+                "uploadedAt": "2026-01-19T05:03:03.255Z"
+              },
+              {
+                "id": "1768799087446",
+                "filename": "women-1768799086626-111051581.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768799086626-111051581.jpeg",
+                "name": "2026 French Retro Fashion Sweetheart One Line Neck Bubble Sleeve Black Waist Strap Pure Desire Style A-line Dress",
+                "price": "$ 9.00",
+                "uploadedAt": "2026-01-19T05:04:47.446Z"
+              }
+            ]
           },
           "crop-tops": {
             "name": "Crop Tops",
-            "images": []
+            "images": [
+              {
+                "id": "1768799505532",
+                "filename": "women-1768799505492-504555939.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768799505492-504555939.jpeg",
+                "name": "Summer Brown White Crop T-Shirt Women Summer Fashion T Shirts Cotton Short Sleeve All-Match Crewneck T Shirt",
+                "price": "$ 7.00",
+                "uploadedAt": "2026-01-19T05:11:45.532Z"
+              },
+              {
+                "id": "1768799632435",
+                "filename": "women-1768799632417-53806015.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768799632417-53806015.jpeg",
+                "name": "Crop Top For Women Korea Sle Short Sleeve Crop Top Streetwear V-neck Sexy Tees Vintage Casual Y2k Tops ",
+                "price": "$ 6.5",
+                "uploadedAt": "2026-01-19T05:13:52.435Z"
+              },
+              {
+                "id": "1768799732578",
+                "filename": "women-1768799732136-961408911.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768799732136-961408911.jpeg",
+                "name": "Hoodie Female Hoodie Personality Irregular Crop Ultra Short Style Long Sleeve Top Female",
+                "price": "$ 8.25",
+                "uploadedAt": "2026-01-19T05:15:32.578Z"
+              },
+              {
+                "id": "1768799829065",
+                "filename": "women-1768799828769-235041831.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768799828769-235041831.jpeg",
+                "name": "Women'S Casual Graphic Crop-top  - It'S One Day at a Time Heart Print, Short Sleeve Round Neck Top for Spring & Summer",
+                "price": "$ 6.85",
+                "uploadedAt": "2026-01-19T05:17:09.065Z"
+              },
+              {
+                "id": "1768800065496",
+                "filename": "women-1768800065442-664081134.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768800065442-664081134.jpeg",
+                "name": "VigoCasey 2026 Spring Lantern Long Sleeve Crop-T Casual Women Hollow Bodycon Crop Top Autumn Lady Floral Print Club Short Tops",
+                "price": "$ 10.00",
+                "uploadedAt": "2026-01-19T05:21:05.496Z"
+              },
+              {
+                "id": "1768819291388",
+                "filename": "women-1768819291360-732334364.jpeg",
+                "url": "http://localhost:5000/uploads/women-1768819291360-732334364.jpeg",
+                "name": "abcd",
+                "price": "$ 1.5",
+                "uploadedAt": "2026-01-19T10:41:31.388Z"
+              }
+            ]
           },
           "pants": {
             "name": "Pants",
@@ -72,16 +219,7 @@
           },
           "shorts": {
             "name": "Shorts",
-            "images": [
-              {
-                "id": "1766223008260",
-                "filename": "women-1766223008256-410236617.jpeg",
-                "url": "http://localhost:5000/uploads/women-1766223008256-410236617.jpeg",
-                "name": "broen dress",
-                "price": "$12.99",
-                "uploadedAt": "2025-12-20T09:30:08.260Z"
-              }
-            ]
+            "images": []
           },
           "caps": {
             "name": "Caps",
@@ -205,7 +343,72 @@
     "categories": {
       "t-shirts": {
         "name": "T-shirts",
-        "images": []
+        "images": [
+          {
+            "id": "1768575082078",
+            "filename": "women-1768575081568-856391203.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768575081568-856391203.jpeg",
+            "name": "2026 Summer Play Time T-Shirt, Children's Size, 2D Printed T-Shirt, Play Time, Boys' and Girls' Casual Top Shirt, T-Shirt,",
+            "price": "$ 4.35",
+            "uploadedAt": "2026-01-16T14:51:22.078Z"
+          },
+          {
+            "id": "1768580167573",
+            "filename": "women-1768580167258-913838421.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768580167258-913838421.jpeg",
+            "name": "Blue Yellow Car, Boys T-shirt Children Summer Clothing Loose Casual Fashion Kids Short Sleeve Tees Tops Round Collar Tshirts",
+            "price": "$ 3.00",
+            "uploadedAt": "2026-01-16T16:16:07.573Z"
+          },
+          {
+            "id": "1768580234574",
+            "filename": "women-1768580234407-109135289.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768580234407-109135289.jpeg",
+            "name": "Cool Red Car, 2D Printed T-Shirt, Play Time, Boys' and Girls' Casual Top Shirt, T-Shirt,",
+            "price": "$ 4.85",
+            "uploadedAt": "2026-01-16T16:17:14.574Z"
+          },
+          {
+            "id": "1768580330443",
+            "filename": "women-1768580330381-19076701.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768580330381-19076701.jpeg",
+            "name": "Solid-color simple IT's Game Time' T-shirt. Summer pure cotton new children's clothing. Short-sleeved T-shirt.",
+            "price": "$ 4.15",
+            "uploadedAt": "2026-01-16T16:18:50.443Z"
+          },
+          {
+            "id": "1768580473490",
+            "filename": "women-1768580473420-382669150.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768580473420-382669150.jpeg",
+            "name": "New Chip 'N' Dale Printed Boys and Girls' Loose and Fashionable Short sleeved Top for Summer 2025",
+            "price": "$ 5.00",
+            "uploadedAt": "2026-01-16T16:21:13.490Z"
+          },
+          {
+            "id": "1768580571436",
+            "filename": "women-1768580571388-248643083.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768580571388-248643083.jpeg",
+            "name": "NASA Collaborative Unisex Casual Cotton Short Sleeve T-Shirt Breathable Cartoon Print Summer New Fashion Sportswear Top",
+            "price": "$ 6.2",
+            "uploadedAt": "2026-01-16T16:22:51.436Z"
+          },
+          {
+            "id": "1768580707259",
+            "filename": "women-1768580707212-807826706.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768580707212-807826706.jpeg",
+            "name": "Latest2026 Space Travel pattern children's T-shirt for boys and girls, babies.100%pure cotton, soft and comfortable T-shirt top.",
+            "price": "$ 5.25",
+            "uploadedAt": "2026-01-16T16:25:07.259Z"
+          },
+          {
+            "id": "1768580778109",
+            "filename": "women-1768580778104-149794679.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768580778104-149794679.jpeg",
+            "name": "Marvel Captain America Cotton T shirt Aesthetic Street Adult Children's Loose Top New kid Quick dry Parent child T Shirt",
+            "price": "$ 3.40",
+            "uploadedAt": "2026-01-16T16:26:18.109Z"
+          }
+        ]
       },
       "tops": {
         "name": "Tops",
@@ -213,7 +416,72 @@
       },
       "pants": {
         "name": "Pants",
-        "images": []
+        "images": [
+          {
+            "id": "1768580951437",
+            "filename": "women-1768580951422-405695863.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768580951422-405695863.jpeg",
+            "name": "Big Boy Brown Pant Casual Fashion Cool Children's Pants Boys' Baggy Summer Clothing Teenagers Comfortable Fit Kids' Fashion",
+            "price": "$ 7.5",
+            "uploadedAt": "2026-01-16T16:29:11.437Z"
+          },
+          {
+            "id": "1768581022965",
+            "filename": "women-1768581022849-145280885.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768581022849-145280885.jpeg",
+            "name": "Kids Light Brown Pant Casual Fashion Cool Children's Pants Boys' Baggy Summer Clothing Teenagers Comfortable Fit Kids' Fashion",
+            "price": "$ 8.12",
+            "uploadedAt": "2026-01-16T16:30:22.965Z"
+          },
+          {
+            "id": "1768581093452",
+            "filename": "women-1768581093344-868468238.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768581093344-868468238.jpeg",
+            "name": "Boys Blue Color Pant Casual Fashion Cool Children's Pants Boys' Baggy Summer Clothing Teenagers Comfortable Fit Kids' Fashion",
+            "price": "$ 9.00",
+            "uploadedAt": "2026-01-16T16:31:33.452Z"
+          },
+          {
+            "id": "1768581145188",
+            "filename": "women-1768581145185-442467515.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768581145185-442467515.jpeg",
+            "name": "Big Boy Jeans Casual Fashion Cool Children's Pants Boys' Baggy Summer Clothing Teenagers Comfortable Fit Kids' Fashion",
+            "price": "$ 8.5",
+            "uploadedAt": "2026-01-16T16:32:25.188Z"
+          },
+          {
+            "id": "1768581219006",
+            "filename": "women-1768581218878-584042815.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768581218878-584042815.jpeg",
+            "name": "Spring Autumn Children Jeans Boys Cotton Print Splice Stretch Denim Pants Korean Teenage Trousers Wear Kids ClothingDenimRipped",
+            "price": "$ 9.50",
+            "uploadedAt": "2026-01-16T16:33:39.006Z"
+          },
+          {
+            "id": "1768581304286",
+            "filename": "women-1768581304148-519089148.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768581304148-519089148.jpeg",
+            "name": "Black Cargo Jeans Casual Fashion Cool Children's Pants Boys' Baggy Summer Clothing Teenagers Comfortable Fit Kids' Fashion",
+            "price": "$ 10.00",
+            "uploadedAt": "2026-01-16T16:35:04.286Z"
+          },
+          {
+            "id": "1768581442599",
+            "filename": "women-1768581442566-992008200.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768581442566-992008200.jpeg",
+            "name": " Boys Cargo Pants Spring Autumn Thick Boys Trousers Casual Kids Sport Pants Teenage Children Clothes For 5-12 Years",
+            "price": "$ 7.25",
+            "uploadedAt": "2026-01-16T16:37:22.599Z"
+          },
+          {
+            "id": "1768581480667",
+            "filename": "women-1768581480612-925310205.jpeg",
+            "url": "http://localhost:5000/uploads/women-1768581480612-925310205.jpeg",
+            "name": "Big Boy Jeans Casual Fashion Cool Children's Pants Boys' Baggy Summer Clothing Teenagers Comfortable Fit Kids' Fashion",
+            "price": "$ 8.50",
+            "uploadedAt": "2026-01-16T16:38:00.667Z"
+          }
+        ]
       },
       "shorts": {
         "name": "Shorts",

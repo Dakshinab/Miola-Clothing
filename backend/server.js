@@ -4,6 +4,10 @@ import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
+import dotenv from 'dotenv';
+import { checkJwt, handleJwtErrors } from './auth0Middleware.js';
+
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -205,10 +209,15 @@ app.get('/api/kids-section', (req, res) => {
   res.json(kidsSectionData);
 });
 
-// Upload new image with name and price
+// Upload new image with name and price (Optional Auth0 protection)
 app.post('/api/upload-image', upload.single('image'), (req, res) => {
   try {
+    console.log('Upload request received');
+    console.log('File:', req.file);
+    console.log('Body:', req.body);
+    
     if (!req.file) {
+      console.log('No file uploaded');
       return res.status(400).json({ error: 'No file uploaded' });
     }
 
@@ -278,99 +287,148 @@ app.post('/api/upload-image', upload.single('image'), (req, res) => {
 
 // Update individual image details (name and price)
 app.put('/api/update-image/:id', (req, res) => {
-  const imageId = req.params.id;
-  const { name, price, section, category } = req.body;
-  const selectedSection = section || 'women';
-  
-  let targetData;
-  if (selectedSection === 'men') {
-    targetData = menSectionData;
-  } else if (selectedSection === 'kids') {
-    targetData = kidsSectionData;
-  } else {
-    targetData = womenSectionData;
-  }
-  
-  let imageIndex = -1;
-  let targetArray = targetData.images;
-  
-  // If category is specified, look in category
-  if (category && targetData.categories[category]) {
-    targetArray = targetData.categories[category].images;
-  }
-  
-  imageIndex = targetArray.findIndex(img => img.id === imageId);
-  
-  if (imageIndex === -1) {
-    return res.status(404).json({ error: 'Image not found' });
-  }
+  try {
+    const imageId = req.params.id;
+    const { name, price, section, category, clothingType } = req.body;
+    const selectedSection = section || 'women';
+    
+    console.log(`[PUT] Updating image ID: ${imageId}, Section: ${selectedSection}, Category: ${category}, ClothingType: ${clothingType}`);
+    
+    let targetData;
+    if (selectedSection === 'main') {
+      targetData = mainSectionData;
+    } else if (selectedSection === 'men') {
+      targetData = menSectionData;
+    } else if (selectedSection === 'kids') {
+      targetData = kidsSectionData;
+    } else {
+      targetData = womenSectionData;
+    }
+    
+    let imageIndex = -1;
+    let targetArray = targetData.images;
+    
+    // For main section with clothing types
+    if (selectedSection === 'main' && category && clothingType) {
+      if (targetData.categories && targetData.categories[category] && targetData.categories[category].types && targetData.categories[category].types[clothingType]) {
+        targetArray = targetData.categories[category].types[clothingType].images;
+        console.log(`[PUT] Searching in main/${category}/${clothingType}, found ${targetArray.length} images`);
+      } else {
+        console.log(`[PUT] Path not found: main/${category}/${clothingType}`);
+      }
+    } 
+    // For other sections with categories
+    else if (category && targetData.categories && targetData.categories[category]) {
+      targetArray = targetData.categories[category].images;
+      console.log(`[PUT] Searching in ${selectedSection}/${category}, found ${targetArray.length} images`);
+    } else {
+      console.log(`[PUT] Searching in ${selectedSection} root images, found ${targetArray.length} images`);
+    }
+    
+    imageIndex = targetArray.findIndex(img => img.id === imageId);
+    console.log(`[PUT] Image found at index: ${imageIndex}`);
+    
+    if (imageIndex === -1) {
+      console.log(`[PUT] Image not found with ID: ${imageId}`);
+      return res.status(404).json({ error: 'Image not found' });
+    }
 
-  if (name) targetArray[imageIndex].name = name;
-  if (price) targetArray[imageIndex].price = price;
+    if (name) targetArray[imageIndex].name = name;
+    if (price) targetArray[imageIndex].price = price;
 
-  // Save data to file
-  saveData({
-    main: mainSectionData,
-    women: womenSectionData,
-    men: menSectionData,
-    kids: kidsSectionData
-  });
+    // Save data to file
+    saveData({
+      main: mainSectionData,
+      women: womenSectionData,
+      men: menSectionData,
+      kids: kidsSectionData
+    });
 
-  res.json({ 
-    success: true, 
-    image: targetArray[imageIndex],
-    message: 'Image updated successfully' 
-  });
+    console.log(`[PUT] Successfully updated image: ${name}`);
+    res.json({ 
+      success: true,
+      image: targetArray[imageIndex],
+      message: 'Image updated successfully' 
+    });
+  } catch (error) {
+    console.error('[PUT] Error:', error);
+    res.status(500).json({ error: error.message });
+  }
 });
 
 // Delete image
 app.delete('/api/delete-image/:id', (req, res) => {
-  const imageId = req.params.id;
-  const { section, category } = req.query;
-  const selectedSection = section || 'women';
-  
-  let targetData;
-  if (selectedSection === 'men') {
-    targetData = menSectionData;
-  } else if (selectedSection === 'kids') {
-    targetData = kidsSectionData;
-  } else {
-    targetData = womenSectionData;
-  }
-  
-  let imageIndex = -1;
-  let targetArray = targetData.images;
-  
-  // If category is specified, look in category
-  if (category && targetData.categories[category]) {
-    targetArray = targetData.categories[category].images;
-  }
-  
-  imageIndex = targetArray.findIndex(img => img.id === imageId);
-  
-  if (imageIndex === -1) {
-    return res.status(404).json({ error: 'Image not found' });
-  }
+  try {
+    const imageId = req.params.id;
+    const { section, category, clothingType } = req.query;
+    const selectedSection = section || 'women';
+    
+    console.log(`[DELETE] Deleting image ID: ${imageId}, Section: ${selectedSection}, Category: ${category}, ClothingType: ${clothingType}`);
+    
+    let targetData;
+    if (selectedSection === 'main') {
+      targetData = mainSectionData;
+    } else if (selectedSection === 'men') {
+      targetData = menSectionData;
+    } else if (selectedSection === 'kids') {
+      targetData = kidsSectionData;
+    } else {
+      targetData = womenSectionData;
+    }
+    
+    let imageIndex = -1;
+    let targetArray = targetData.images;
+    
+    // For main section with clothing types
+    if (selectedSection === 'main' && category && clothingType) {
+      if (targetData.categories && targetData.categories[category] && targetData.categories[category].types && targetData.categories[category].types[clothingType]) {
+        targetArray = targetData.categories[category].types[clothingType].images;
+        console.log(`[DELETE] Searching in main/${category}/${clothingType}, found ${targetArray.length} images`);
+      } else {
+        console.log(`[DELETE] Path not found: main/${category}/${clothingType}`);
+      }
+    } 
+    // For other sections with categories
+    else if (category && targetData.categories && targetData.categories[category]) {
+      targetArray = targetData.categories[category].images;
+      console.log(`[DELETE] Searching in ${selectedSection}/${category}, found ${targetArray.length} images`);
+    } else {
+      console.log(`[DELETE] Searching in ${selectedSection} root images, found ${targetArray.length} images`);
+    }
+    
+    imageIndex = targetArray.findIndex(img => img.id === imageId);
+    console.log(`[DELETE] Image found at index: ${imageIndex}`);
+    
+    if (imageIndex === -1) {
+      console.log(`[DELETE] Image not found with ID: ${imageId}`);
+      return res.status(404).json({ error: 'Image not found' });
+    }
 
-  const image = targetArray[imageIndex];
-  
-  // Delete file from filesystem
-  const filePath = path.join(__dirname, 'uploads', image.filename);
-  if (fs.existsSync(filePath)) {
-    fs.unlinkSync(filePath);
-  }
+    const image = targetArray[imageIndex];
+    
+    // Delete file from filesystem
+    const filePath = path.join(__dirname, 'uploads', image.filename);
+    if (fs.existsSync(filePath)) {
+      fs.unlinkSync(filePath);
+      console.log(`[DELETE] File deleted: ${image.filename}`);
+    }
 
-  targetArray.splice(imageIndex, 1);
-  
-  // Save data to file
-  saveData({
-    main: mainSectionData,
-    women: womenSectionData,
-    men: menSectionData,
-    kids: kidsSectionData
-  });
-  
-  res.json({ success: true, message: 'Image deleted successfully' });
+    targetArray.splice(imageIndex, 1);
+    
+    // Save data to file
+    saveData({
+      main: mainSectionData,
+      women: womenSectionData,
+      men: menSectionData,
+      kids: kidsSectionData
+    });
+    
+    console.log(`[DELETE] Successfully deleted image`);
+    res.json({ success: true, message: 'Image deleted successfully' });
+  } catch (error) {
+    console.error('[DELETE] Error:', error);
+    res.status(500).json({ error: error.message });
+  }
 });
 
 // Update section data
@@ -427,16 +485,31 @@ app.put('/api/kids-section', (req, res) => {
   res.json({ success: true, data: kidsSectionData });
 });
 
-app.listen(PORT, () => {
-  // Load data from file on startup
-  const savedData = loadData();
-  if (savedData) {
-    mainSectionData = savedData.main || mainSectionData;
-    womenSectionData = savedData.women || womenSectionData;
-    menSectionData = savedData.men || menSectionData;
-    kidsSectionData = savedData.kids || kidsSectionData;
-    console.log('Data loaded from file');
-  }
-  
-  console.log(`Server running on http://localhost:${PORT}`);
+// Auth0 error handling middleware
+app.use(handleJwtErrors);
+
+// General error handling middleware
+app.use((err, req, res, next) => {
+  console.error('Server error:', err);
+  res.status(err.status || 500).json({ 
+    error: err.message || 'Internal server error' 
+  });
 });
+
+try {
+  const server = app.listen(PORT, () => {
+    // Load data from file on startup
+    const savedData = loadData();
+    if (savedData) {
+      mainSectionData = savedData.main || mainSectionData;
+      womenSectionData = savedData.women || womenSectionData;
+      menSectionData = savedData.men || menSectionData;
+      kidsSectionData = savedData.kids || kidsSectionData;
+      console.log('Data loaded from file');
+    }
+    
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+} catch (err) {
+  console.error('Error starting server:', err);
+}
