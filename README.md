@@ -2,7 +2,7 @@
 
 A modern, responsive e-commerce platform for Miola Clothing, built with React and Node.js. Browse and shop for women's, men's, and kids' clothing with an intuitive admin panel for product management.
 
-## 🌟 Features
+##  Features
 
 ### Customer Features
 - **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
@@ -35,7 +35,7 @@ A modern, responsive e-commerce platform for Miola Clothing, built with React an
 - **FAQ** - Frequently asked questions
 - **Footer** - Quick links to WhatsApp and social media
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **Frontend:**
 - React 19.2.0
@@ -54,7 +54,7 @@ A modern, responsive e-commerce platform for Miola Clothing, built with React an
 **Data Storage:**
 - JSON file-based database (data.json)
 
-## 📋 Project Structure
+##  Project Structure
 
 ```
 miola-clothing/
@@ -90,7 +90,7 @@ miola-clothing/
 └── README.md
 ```
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 - Node.js (v14 or higher)
@@ -117,7 +117,7 @@ npm start
 
 Frontend runs on http://localhost:3000
 
-## 📚 API Endpoints
+## API Endpoints
 
 ### Product Data
 - `GET /api/women-section` - Get women's collection
@@ -130,7 +130,7 @@ Frontend runs on http://localhost:3000
 - `PUT /api/update-image/:id` - Update product details
 - `DELETE /api/delete-image/:id` - Delete product image
 
-## 🎯 How to Use
+##  How to Use
 
 ### As a Customer
 
@@ -181,38 +181,38 @@ Frontend runs on http://localhost:3000
    - Switch between Main Page, Women's, Men's, or Kids' tabs
    - Edit or delete products directly from each section
 
-## 📱 Responsive Breakpoints
+##  Responsive Breakpoints
 
 - Desktop: 1200px and above
 - Tablet: 900px - 1200px
 - Mobile: 600px - 900px
 - Small Mobile: Below 600px
 
-## 🎨 Color Scheme
+##  Color Scheme
 
 - Primary: Black (#000000)
 - Secondary: White (#FFFFFF)
 - Accent: Gold (#ffd700)
 - Text: Black (#000000)
 
-## 📝 Store Information
+##  Store Information
 
 **Miola Clothing**
 - Founded: March 15, 2025
 - Location: In front of the Post Office, Medagama, Biblē
 - Contact: WhatsApp link in footer
 
-## 🔐 Authentication
+##  Authentication
 
 Login/Signup modal - Click the user icon in the header to:
 - **Login**: Enter email/mobile and password
 - **Sign Up**: Create account with username, email, mobile, and password
 
-## 💾 Data Persistence
+##  Data Persistence
 
 All product data is saved to `backend/data.json` and persists between server restarts.
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Frontend won't load
 - Ensure backend is running on port 5000
@@ -229,11 +229,15 @@ All product data is saved to `backend/data.json` and persists between server res
 - Check backend logs for errors
 - Ensure backend/uploads/ directory exists
 
-## 📄 License
+##  License
 
 This project is proprietary to Miola Clothing.
 
-## 👥 Support
+## Security Notes
+
+This is a portfolio project built for a real local business. Auth0 handles customer authentication securely. Admin access is protected via Auth0 authentication. The JSON file-based database is suitable for this small-scale use case - a production version would use a proper database such as MongoDB or PostgreSQL.
+
+##  Support
 
 For issues or inquiries, contact via WhatsApp link in the footer.
 
